@@ -4,10 +4,10 @@ Licensed under the CC BY-NC 4.0 license (https://creativecommons.org/licenses/by
 """
 import torch
 import numpy as np
-import collections
-from torch._six import string_classes
+import collections.abc as collections
+#from torch._six import string_classes
 
-
+string_classes = str
 """ Custom collate function """
 def collate_custom(batch):
     if isinstance(batch[0], np.int64):
